@@ -25,3 +25,26 @@ go-backend-template/
 └── tmp/
     └── main
 ```
+
+## Project Structure Description
+
+### internal
+The `internal` package contains application-specific code that is not intended for external use. This follows Go's convention for internal packages.
+
+#### api
+Handles HTTP routing and API endpoints for the Fiber web framework.
+
+##### routes.go
+Defines API routes and handlers for the application, including health checks and other endpoints.
+
+#### config
+Manages application configuration, database connections, and middleware setup.
+
+##### app.go
+Contains application configuration including database setup, CORS middleware, and logging configuration.
+
+##### config.go
+Main configuration initialization and Fiber app setup, coordinating all configuration components.
+
+#### logger.go
+Logging configuration and utilities for the application.
