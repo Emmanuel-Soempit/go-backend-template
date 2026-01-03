@@ -1,8 +1,8 @@
-# Go Backend Template
+# **Go Backend Template**
 
 A Go backend template that uses Air for hot reloading, Fiber for web framework, and Ent for database ORM.
 
-## Project Structure
+## **Project Structure**
 
 ```
 go-backend-template/
@@ -26,12 +26,12 @@ go-backend-template/
     └── main
 ```
 
-## Project Structure Description
+## **Project Structure Description**
 
-### internal
+## internal
 The `internal` package contains application-specific code that is not intended for external use. This follows Go's convention for internal packages.
 
-#### api
+### api
 Handles HTTP routing and API endpoints for the Fiber web framework.
 
 ##### routes.go
