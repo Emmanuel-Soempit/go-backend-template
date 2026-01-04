@@ -37,7 +37,8 @@ go-backend-template/
 │   │   ├── app.go
 │   │   └── config.go
 │   ├── middleware/
-│   │   └── jwt.go
+│   │   ├── jwt.go
+│   │   └── rate_limiter.go
 │   └── utils/
 │       ├── jwt.go
 │       ├── password.go
@@ -110,10 +111,13 @@ go-backend-template/
    Located within `internal/config`, this file provides main configuration initialization and Fiber app setup, coordinating all configuration components.
    
    1.3. **middleware**
-   Located within `internal`, this package contains HTTP middleware for authentication and authorization.
+   Located within `internal`, this package contains HTTP middleware for authentication, authorization, and rate limiting.
    
    1.3.1. **jwt.go**
    Located within `internal/middleware`, this file provides JWT token validation middleware.
+   
+   1.3.2. **rate_limiter.go**
+   Located within `internal/middleware`, this file provides rate limiting middleware with configurable limits for different endpoints.
    
    1.4. **utils**
    Located within `internal`, this package contains utility functions for JWT, password hashing, and API responses.
