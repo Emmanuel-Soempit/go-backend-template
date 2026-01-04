@@ -8,8 +8,11 @@ import (
 )
 
 func InitializeApiRoutes(app *fiber.App, client *ent.Client) {
-	app.Static("/public", "./public")
 
+	// Example implementation of global rate limiting using default configs
+	// app.Use(middleware.RateLimiter(middleware.DefaultConfig))
+
+	app.Static("/public", "./public")
 	app.Get("/health-check", func(c *fiber.Ctx) error {
 		return c.SendString("Server is running!...")
 	})

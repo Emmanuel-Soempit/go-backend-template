@@ -15,8 +15,11 @@ import (
 func RegisterAuthRoutes(router fiber.Router, client *ent.Client) {
 	authGroup := router.Group("/auth")
 
-	// How to implement jwt for all auth routes
-	authGroup.Use(middleware.CheckJwtToken)
+	// Example implementation of JWT middleware for all auth routes
+	// authGroup.Use(middleware.CheckJwtToken)
+
+	// Implementation of rate limiting for all auth routes
+	authGroup.Use(middleware.AuthRateLimiter())
 
 	// Intiaizes structs
 	userRepo := repository.NewEntUserRepo(client)
